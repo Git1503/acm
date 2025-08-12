@@ -14,6 +14,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"            
     />
+     <textview
+        android:id="@+id/mainButton"
+        android:text="urinsecondactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"            
+    />
+    
 
 </LinearLayout>
 
@@ -45,10 +52,15 @@ startActivity(in);
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-    <TextView
-android:text="This is the second activity"
-android:layout_width="wrap_content"android:layout_height="wrap_content"/>
+    
+     <TextView
+      android:text="This is the second activity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+     />
+
 </LinearLayout>
+
 
 //SecondActivity.java
 
