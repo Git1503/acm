@@ -1,6 +1,68 @@
+//Button Main xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	 
+ xmlns:android="http://schemas.android.com/apk/res/android"
+	       xmlns:app="http://schemas.android.com/apk/res-auto"
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent"
+        android:gravity="center">
     <Button
         android:id="@+id/mainButton"
         android:text="nameofactivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"            
     />
+
+</LinearLayout>
+
+//MainActivity.java
+package com.kcgroup.anotheractivity;
+import android.app.*;
+import android.os.*;
+import android.widget.*;
+import android.view.*;
+import android.content.*;
+public class MainActivity extends Activity
+{    @Override
+    protected void onCreate(Bundle savedInstanceState)    {        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+Button btn=(Button)findViewById(R.id.mainButton);
+btn.setOnClickListener(new View.OnClickListener(){
+@Override
+public void onClick(View p1)
+{Intent in=new Intent(MainActivity.this, SecondActivity.class);
+startActivity(in);
+// TODO: Implement this method
+}});    }}
+
+
+
+//Second.xml
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <TextView
+android:text="This is the second activity"
+android:layout_width="wrap_content"android:layout_height="wrap_content"/>
+</LinearLayout>
+
+//SecondActivity.java
+
+package com.kcgroup.anotheractivity;
+import android.app.*;
+import android.os.*;
+public class SecondActivity extends Activity
+{    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {        super.onCreate(savedInstanceState);
+        setContentView(R.layout.second);
+    }}
+
+
+
+
+
